@@ -39,6 +39,8 @@
 	<div data-role="navbar">
 	<ul>
 	<li><a href="#one" data-direction="reverse" data-role="button" data-theme="e">Home</a></p></li>
+	<li><a href="https://github.com/JustinHegelKhalil/Mobile-Interfaces-Usability.git" id="github" data-role="button" data-theme="e">Github Link</a></p></li>
+	
 	<li><a href="#two" data-direction="reverse" data-role="button" data-theme="e">Human Resources</a></p></li>
 	<li><a href="#three" data-direction="reverse" data-role="button" data-theme="e">Add Asset</a></p></li>
 	</ul>
@@ -59,18 +61,7 @@
 		<div id="resources" name="resources"></div>
 		<p>Members of the company</p>
 		<div id="members">
-   <ul>
-   <li> 
-    <a href="edit.html" class="ID">
-       <input type="hidden" id="ID" />
-       <span class="name"></span></a>
-       <span class="model"></span></a>
-       <span class="job"></span></a>
-       <span class="experience"></span></a>
-       <span class="mission"></span></a>
-       <span class="date"></span></a>
-   </li>
-   </ul>
+   
 </div>	
 		
 		
@@ -96,10 +87,9 @@
 		<h2>Asset Adder</h2>
 		<form action="" method="post" id="assetAdder" validate="true">
 		<input type="reset" data-icon="refresh" data-mini="true" id="resetButton" value="Reset Fields" /></input>
-		<label for="fname" id="label" style="font-size:small">First-name:</label><input type="text" value placeholder="John" data-mini="true" class="required" name="fname" id="fname" data-mini="true" style="display:block;width:90%"/>
-		<input type="text" id="date" data-mini="true" size="30" class="required"/>
+		<label for="name" id="label" style="font-size:small">Name:</label><input type="text" value placeholder="John" data-mini="true" class="required" name="name" id="name" data-mini="true" style="display:block;width:90%"/>
 		<div data-role="fieldcontain">
-		<label for="model" data-mini="true">Asset's Role Model</label>
+		<label for="model" data-mini="true">Asset's Role Model:</label>
 		<select id="model" name="model" data-mini="true" class="required validate" data-native-menu="true">
 		<option data-placeholder="false" value="">Select a role-model for this asset.</option>
 		<option value="Lean">David Lean</option>
@@ -115,7 +105,7 @@
 		</select>
 		</div>
 		<div data-role="fieldcontain">
-		<label for="job" data-mini="true">Asset's Job</label>
+		<label for="job" data-mini="true">Asset's Job:</label>
 		<select id="job" name="job" data-mini="true" class="required validate" data-native-menu="true">
 		<option data-placeholder="false" value="">Select a job for this asset.</option>
 		<option value="Director">Director</option>
@@ -127,10 +117,8 @@
 		<option value="Artist">Artist</option>
 		</select>
 		</div>
-		<label for="experience">Experience Level (hours):</label>
-		<input type="range" name="experience" data-mini="true" id="experience" value="100" min="0" max="10000" />
 		<div data-role="fieldcontain">
-		<label for="mission" data-mini="true">Asset's Motivation</label>
+		<label for="mission" data-mini="true">Asset's Motivation:</label>
 		<select id="mission" name="mission" data-mini="true" class="required validate" data-native-menu="true">
 		<option data-placeholder="false" value="">Select an artistic motivation for this asset.</option>
 		<option value="informational">informational</option>
@@ -142,9 +130,15 @@
 		<option value="exclamatory">exclamatory</option>
 		</select>
 		</div>
+		<label for="experience">Experience Level (hours):</label>
+		<input type="range" name="experience" data-mini="true" id="experience" value="100" min="0" max="10000" />
+		<label for="date" data-mini="true">Date Of Hire</label>
+		<input type="text" id="date" data-mini="true" size="30" class="required"></input>
+		
 		
 		
 		<input type="submit" data-icon="refresh" data-mini="true" id="submit" value="submit"></input>
+		<a href="#errorDialog" id="memberFormErrors" data-rel="dialog" data-transition="none">Open Errors</a>
 		</form>
 	</div><!-- /content -->
 	
@@ -177,13 +171,26 @@
 	</div><!-- /footer -->
 </div><!-- /page popup -->
 
+<div data-role="dialog" name="errorDialog" id="errorDialog" data-theme="a">
+	<div data-role="header" data-position="fixed" data-theme="a">
+	<h1>Fields Missing</h1>
+	</div>
+	<div data-role="content">
+<ul> 
+
+</ul>
+
+
+</div>
+</div>
+
 
 <div class="ui-loader ui-corner-all ui-body-e ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div>
 <script src="./js/libs/jquery-1.7.1.min.js"></script>
 	<script src="./js/libs/jquery-ui-1.8.23.custom.min.js"></script>
 	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
 	<script src="./js/libs/jquery.validate.js"></script>
-	<script src="./js/libs/jquery.loadJSON.js"></script>
+	
 	<script src="./js/json.js"></script>
 	<script src="./js/main.js"></script>
 
