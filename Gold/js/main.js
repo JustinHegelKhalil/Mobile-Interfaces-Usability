@@ -4,24 +4,32 @@ var parseFormData = function(data){
 };
 
 var resetForm = function($form) {
-    $form.find('input:text, input:password, input:file, select, textarea, option').val('');
+    //$('#assetAdder').find('input:text, inoption').val('');
     $form.find('input:radio, input:checkbox')
          .removeAttr('checked').removeAttr('selected');
 }
 
 var storer = function(id ,name, model, job, mission, experience, date){
-	var data = ("[name:"+name+"] [Model:"+model+"] [Job:"+job+"] [Mission:"+mission+"] [Experience:"+experience+"] [Date:"+date+"]");
+	var data = {}
+		data['name'] = ["name", name];
+		data['model'] = ["model", model]; 
+		data['job'] = ["job", job];
+		data['mission'] = ["mission", mission]; 
+		data['experience'] = ["experience", experience]; 
+		data['date'] = ["date", date];
 
-	localStorage.setItem(id, data);
+	localStorage.setItem(id, JSON.stringify(data));
 	//console.log(JSON.stringify(json));
 }
 
-var displayPeople = function(){
-	//alert("displayPeople has been clicked");
-	//check Localstorage for stuff.
-	if (localStorage.length <= 1) {
-		alert("localStorage is empty");
-		for (var key in json) {
+//var storer = function(id ,name, model, job, mission, experience, date){
+//	var data = ("[name:"+name+"] [Model:"+model+"] [Job:"+job+"] [Mission:"+mission+"] [Experience:"+experience+"] [Date:"+date+"]");
+//
+//	localStorage.setItem(id, data);
+//}
+
+var loadDefaultData = function(){
+	for (var key in json) {
 			//var id = Math.floor(Math.random()*10000000000);
 			var m = json[key]['date'][0];
 			var d = json[key]['date'][1];
@@ -42,6 +50,15 @@ var displayPeople = function(){
 			storer(id, name, model, job, mission, experience, date);
 			//localStorage.setItem(id, JSON.stringify(json[key]));
 		}
+}
+
+var displayPeople = function(){
+	//alert("displayPeople has been clicked");
+	//check Localstorage for stuff.
+	if (localStorage.length <= 1) {
+		loadDefaultData();
+		alert("localStorage is empty");
+		
 	}
 	// take items from LOCALSTORAGE 
 	// create listing for each person, assign each class "listItem"
@@ -49,15 +66,46 @@ var displayPeople = function(){
 	var members = $('#members');
 	$('#members').empty('.itemsListed');
 	for (var n in localStorage){
-		if (localStorage[n].length > 30){
-			var member = localStorage[n];
-	members.append("<div id="+n+" class='itemsListed'>"+localStorage[n]+"</div>");
-	$(".member:last").addClass("itemsListed");
-	members.append("<br/>");}
+		if (localStorage[n].length > 40){
+			var thing = localStorage.getItem(n);
+			var value = JSON.parse(thing);
+			var formStart = ("<div id='"+n+"'>");
+			var formEnd = ("</div>");
+			//var name = thing['name'][1];
+	members.append(formStart);
+	var name = value['name'][1];
+	var formLineName = ('<label for="name" id="label" style="font-size:small">Name:</label><input type="text" value="'+name+'" data-mini="true" class="required" name="name" id="name" data-mini="true" style="display:block;width:90%"/>');
+	var model = value['model'][1];
+	var formLineModel = ('<div data-role="fieldcontain"><label for="model" data-mini="true">Role Model:</label><select id="model" name="model" data-mini="true" class="required validate" data-native-menu="true"><option data-placeholder="true" value="'+model+'">Asset\'s current role-model is '+model+'</option><option value="Lean">David Lean</option><option value="Hitchcock">Alfred Hitchcock</option><option value="Welles">Orson Welles</option><option value="Lucas">George Lucas</option><option value="Wilder">Billy Wilder</option><option value="Leone">Sergio Leone</option><option value="Spielberg">Steven Spielberg</option><option value="Akira">Akira Kurasawa</option><option value="Disney">Walt Disney</option><option value="Kubrick">Stanley Kubrick</option></select></div>');
+	var job = value['job'][1];
+	var formLineJob = ('<div data-role="fieldcontain"><label for="job" data-mini="true">Asset\'s Job:</label><select id="job" name="job" data-mini="true" class="required validate" data-native-menu="true"><option data-placeholder="true" value="'+job+'">Asset\'s current job is '+job+'.</option><option value="Director">Director</option><option value="Writer">Writer</option><option value="Photographer">Photographer</option><option value="Producer">Producer</option><option value="Editor">Editor</option><option value="Composer">Composer</option><option value="Artist">Artist</option></select></div>');
+	var experience = value['experience'][1];
+	members.append(formLineName);
+	members.append(formLineModel);
+	members.append(formLineJob);
+
+	members.append(formEnd);	
+
+	//members.append("<div id='"+n+"'</div>");
+	//members.append("<div class='itemsListed' data-role='button' data-mini='true'>"+localStorage[n]+"</div>");
+	//$(".member:last").addClass("itemsListed");
+	//$("#"+n).attr('data-role="button"');
+	//$("#members").wrap('data-role="button"');
+	// Procedure, identify and assign values to each form field.
+	// one variable per item, which is then assigned to the value of the default form field options.
+	// submit button not a typical form field submit button. It's a jquery "click" function, which simply 
+	// sets the item in localstorage with the values input with the date and names-based key, and deletes
+	// the item with the original key if the new key is different from the original.
+	members.append("<br/>");
+
+}
+	
 
 	}
 
 }	
+
+
 
 var addPeople = function(){
 	alert("addPeople has been clicked");
@@ -70,7 +118,6 @@ var displayProject = function(){
 
 
 var submitAsset = function(){
-resetForm($('#assetAdder'));
 alert("asset has been added");
 }
 
@@ -140,11 +187,11 @@ assetAdder.validate({
 		//console.log(year);
 		var m1 = date[6];
 		var m2 = date[7];
-		var month = (m1+m2);
+		var month = (m1+''+m2);
 		//console.log(month);
 		var d1 = date[9];
 		var d2 = date[10];
-		var day = (d1+d2);
+		var day = (d1+''+d2);
 		//console.log(day);
 		//console.log(name+model+mission+job);
 		parseFormData(data);
@@ -157,7 +204,7 @@ assetAdder.validate({
 		var d = d *= 1000;
 		var y = y *= 1000000000;
 		
-		var id = (m+d+y+name);
+		var id = (m += d += y + name);
 		var data = ("name:"+name+"Model:"+model+"Job:"+job+"Mission:"+mission+"Experience:"+experience+"Date:"+date);
 		storer(id, name, model, job, mission, experience, date);
 		submitAsset();
