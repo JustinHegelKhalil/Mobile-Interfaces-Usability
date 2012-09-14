@@ -16,8 +16,8 @@
 <body class="ui-mobile-viewport ui-overlay-e"> 
 
 <!-- Start of page: #one -->
-<div data-role="page" id="one" data-url="one" tabindex="0" class="ui-page ui-body-e ui-page-active" data-theme="e" style="min-height: 735px; ">
-
+<div data-role="page" id="one" data-url="one" tabindex="0" class="ui-page ui-body-e ui-page-active" data-theme="e" style="min-height: 735px; "> 
+	
 	<div data-role="header" class="ui-header ui-bar-e" role="banner">
 	<img src="./images/creativeDifferences.png" style="width:100%"></img>
 	</div><!-- /header -->
@@ -25,12 +25,40 @@
 	<div data-role="content" class="ui-content" role="main">	
 		
 		
-		<p></p>	
-		<p></p>
+		<h1>Creative Differences is a simulation of the politics of filmmaking. </h1>	
+		
+			
+		<li id="feature" style="border-radius:10px;padding:10px;border:3px solid black">
+		<img src="./images/director.jpg" style="float:right;width:50px"></img>
+		<h3>Marge</h3><h4>Marge's job: Director<br/>Marge's Role-Model is Kubrick<br/> Marge's artistic intent is exclamatory</h4>
+		</li>
+		
+		<li id="feature" style="border-radius:10px;padding:10px;border:3px solid black"><p>Marge is a director, and Neville is a Writer. They need each-other to make a movie<br/> 
+		While Marge's intent is exclamatory, Neville's is interrogatory. This causes conflicts, as transforming an interragative to an exclamatory is difficult.</p>
+		</li>
+		<li id="feature" style="border-radius:10px;padding:10px;border:3px solid black">
+		<img src="./images/writer.jpg" style="float:right;width:50px"></img>
+		<h3>Neville</h3><h4>Neville's job: Writer<br/>Neville's Role-Model is Spielberg<br/> Neville's artistic intent is interrogatory</h4>
+		</li>
+		<br/>
+		<li id="feature" style="border-radius:10px;padding:10px;border:3px solid red">
+		<img src="./images/director.jpg" style="float:right;width:50px"></img>
+		<h3>Marge</h3><h4>Marge's job: Director<br/>Marge's Role-Model is Kubrick<br/> Marge's artistic intent is exclamatory</h4>
+		</li>
+		
+		<li id="feature" style="border-radius:10px;padding:10px;border:3px solid red"><p>The best way to manage these assets is to change one of the asset's motivations to make them more compatible. Like making Neville's intent declarative, which can be more compatible with an exclamatory sensibility.</p>
+		</li>
+		<li id="feature" style="border-radius:10px;padding:10px;border:3px solid red">
+		<img src="./images/writer.jpg" style="float:right;width:50px"></img>
+		<h3>Neville</h3><h4>Neville's job: Writer<br/>Neville's Role-Model is Spielberg<br/> Neville's artistic intent is declarative</h4>
+		</li>
+			
+		
+		
 		<p></p>	
 
 		<h3></h3>
-		<p><a href="./#two" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="e" class="ui-btn ui-btn-up-e ui-shadow ui-btn-corner-all" id="checkPeople"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Check Human Resources</span></span></a></p>	
+		<p><a href="#" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="e" class="ui-btn ui-btn-up-e ui-shadow ui-btn-corner-all" id="checkPeople"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Check Human Resources</span></span></a></p>	
 		<p><a href="./#three" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="e" class="ui-btn ui-btn-up-e ui-shadow ui-btn-corner-all" id="addPeople"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Add Human Resource</span></span></a></p>	
 		<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="e" class="ui-btn ui-btn-up-e ui-shadow ui-btn-corner-all" id="viewProject"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Show Current Project</span></span></a></p>
 	</div><!-- /content -->
@@ -38,12 +66,13 @@
 	<div data-role="footer" data-id="footerBar" name="footerBar">
 	<div data-role="navbar">
 	<ul>
-	<li><a href="#one" data-direction="reverse" data-role="button" data-theme="e">Home</a></p></li>
-	<li><a href="https://github.com/JustinHegelKhalil/Mobile-Interfaces-Usability.git" id="github" data-role="button" data-theme="e">Github Link</a></p></li>
+	<li><a href="#one" data-direction="reverse" data-role="button" data-theme="e">Home</a></li>
+	<li><a href="https://github.com/JustinHegelKhalil/Mobile-Interfaces-Usability.git" id="github" data-role="button" data-theme="e">Github Link</a></li>
 	
-	<li><a href="#two" data-direction="reverse" data-role="button" data-theme="e">Human Resources</a></p></li>
-	<li><a href="#three" data-direction="reverse" data-role="button" data-theme="e">Add Asset</a></p></li>
+	<li><a href="#" id="openPeople" data-direction="reverse" data-role="button" data-theme="e">Human Resources</a></li>
+	<li><a href="#three" data-direction="reverse" data-role="button" data-theme="e">Add Asset</a></li>
 	</ul>
+	<a href="./#two" data-direction="reverse" id="openHumanResources" data-role="button" data-theme="e">Human Resources</a>
 	</div>
 	</div><!-- /footer -->
 </div><!-- /page one -->
@@ -51,28 +80,30 @@
 
 <!-- Start of page: #two -->
 <div data-role="page" id="two" data-theme="e" data-url="two">
-
+ <script type="text/javascript" charset="utf-8"></script>
 	<div data-role="header" class="ui-header ui-bar-e" role="banner">
+		
+	
 	<img src="./images/creativeDifferences.png" style="width:100%"></img>
 	</div><!-- /header -->
 
 	<div data-role="content" data-theme="e">	
-		<h2>Assets</h2>
-		<div id="resources" name="resources"></div>
-		<p>Members of the company</p>
-		<div id="members">
+		<h2>Company Staff</h2>
+		<div id="resources" name="resources" data-theme="e">
+		<div data-role="fieldcontain" data-theme="e">
+		<ul id="members" data-role="listview" data-filter="true" data-filter-placeholder="search employees" data-filter-theme="e" role="search" style="margin:5%">
    
-</div>	
-		
-		
+		</ul>	
+		</div>
+		</div>
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="footerBar" name="footerBar">
 	<div data-role="navbar">
 	<ul>
-	<li><a href="#one" data-direction="reverse" data-role="button" data-theme="e">Home</a></p></li>
-	<li><a href="#two" data-direction="reverse" data-role="button" data-theme="e">Human Resources</a></p></li>
-	<li><a href="#three" data-direction="reverse" data-role="button" data-theme="e">Add Asset</a></p></li>
+	<li><a href="./#one" data-direction="reverse" data-role="button" data-theme="e">Home</a></p></li>
+	<li><a href="./#two" data-direction="reverse" data-role="button" data-theme="e">Human Resources</a></p></li>
+	<li><a href="./#three" data-direction="reverse" data-role="button" data-theme="e">Add Asset</a></p></li>
 	</ul>
 	</div>
 	</div><!-- /footer -->
@@ -87,7 +118,7 @@
 		<h2>Asset Adder</h2>
 		<form action="" method="post" id="assetAdder" validate="true">
 		<input type="reset" data-icon="refresh" data-mini="true" id="resetButton" value="Reset Fields" /></input>
-		<label for="name" id="label" style="font-size:small">Name:</label><input type="text" value placeholder="John" data-mini="true" class="required" name="name" id="name" data-mini="true" style="display:block;width:90%"/>
+		<label for="nameField" id="label" style="font-size:small">Name:</label><input type="text" value placeholder="John" data-mini="true" class="required" name="nameField" id="nameField" data-mini="true" style="display:block;width:90%"/>
 		<div data-role="fieldcontain">
 		<label for="model" data-mini="true">Asset's Role Model:</label>
 		<select id="model" name="model" data-mini="true" class="required validate" data-native-menu="true">
@@ -130,8 +161,6 @@
 		<option value="exclamatory">exclamatory</option>
 		</select>
 		</div>
-		<label for="experience">Experience Level (hours):</label>
-		<input type="range" name="experience" data-mini="true" id="experience" value="100" min="0" max="10000" />
 		<label for="date" data-mini="true">Date Of Hire</label>
 		<input type="text" id="date" data-mini="true" size="30" class="required"></input>
 		
@@ -158,6 +187,7 @@
 <div data-role="page" id="popup" data-url="popup" data-theme="e">
 
 	<div data-role="header" data-theme="e">
+
 		<h1>Dialog</h1>
 	</div><!-- /header -->
 
@@ -186,12 +216,12 @@
 
 
 <div class="ui-loader ui-corner-all ui-body-e ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div>
-<script src="./js/libs/jquery-1.7.1.min.js"></script>
+	<script src="./js/libs/jquery-1.7.1.min.js"></script>
+		<script src="./js/json.js"></script>
+	<script src="./js/main.js"></script>
 	<script src="./js/libs/jquery-ui-1.8.23.custom.min.js"></script>
 	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
 	<script src="./js/libs/jquery.validate.js"></script>
-	
-	<script src="./js/json.js"></script>
-	<script src="./js/main.js"></script>
+
 
 </body></html>

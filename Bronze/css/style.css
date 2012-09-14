@@ -2,3 +2,14 @@ label.error{display:block;margin:10px 0;color:#cc0000;}
 #memberFormErrors{
 	display:none;
 }
+#openHumanResources{
+	display:none;
+}
+#findDirectors {
+	margin:10px;
+}
+#findComposers{margin:10px;}
+#findEditors{margin:10px;}
+#findWriters{margin:10px;}
+#findProducers{margin:10px;}
+#undoFind{margin:10px;}

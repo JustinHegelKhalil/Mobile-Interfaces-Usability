@@ -13,24 +13,57 @@
 </head> 
 
 	
-<body class="ui-mobile-viewport ui-overlay-e"> 
+<body class="ui-mobile-viewport ui-overlay-a"> 
 
 <!-- Start of page: #one -->
-<div data-role="page" id="one" data-url="one" tabindex="0" class="ui-page ui-body-a ui-page-active" data-theme="a" style="min-height: 735px; ">
-
-	<div data-role="header" class="ui-header ui-bar-e" role="banner">
+<div data-role="page" id="one" data-url="one" tabindex="0" class="ui-page ui-body-a ui-page-active" data-theme="a" style="min-height: 735px; "> 
+	
+	<div data-role="header" class="ui-header ui-bar-a" role="banner">
 	<img src="./images/creativeDifferences.png" style="width:100%"></img>
 	</div><!-- /header -->
 
 	<div data-role="content" class="ui-content" role="main">	
 		
 		
-		<p></p>	
-		<p></p>
+		<h3>Creative Differences is a simulation of the politics of filmmaking. </h3>	
+		
+		<div data-role="navbar" data-theme="a">
+			<ul>
+		<li id="feature" style="border-radius:10px;font-size:70%;padding:5px;border:3px solid black">
+		<img src="./images/director.jpg" style="float:right;width:30px"></img>
+		<h3>Marge</h3><h4>Director<br/>Role-Model: Kubrick<br/>Intent: Exclamatory</h4>
+		</li>
+		
+		<li id="feature" style="border-radius:10px;font-size:70%;padding:10px"><p>Match creatives with complementary talents and temperaments. Every job is necessary for a project, but some temperaments and inspirations are mutually exclusive.</p>
+		</li>
+		<li id="feature" style="border-radius:10px;padding:5px;font-size:70%;border:3px solid black">
+		<img src="./images/writer.jpg" style="float:right;width:30px"></img>
+		<h3>Neville</h3><h4>Writer<br/>Role-Model: Spielberg<br/>Intent: Interrogatory</h4>
+		</li>
+	</ul>
+	</div>
+		<br/>
+		<div data-role="navbar">
+		<ul>
+		<li id="feature" style="border-radius:10px;padding:5px;font-size:70%"><p>The best way to manage these assets is to change one of the asset's motivations to make them more compatible. Like making Neville's intent declarative, which can be more compatible with an exclamatory sensibility.</p>
+		</li>
+		<li id="feature" style="border-radius:10px;padding:5px;font-size:70%;border:3px solid yellow">
+		<img src="./images/director.jpg" style="float:right;width:30px"></img>
+		<h3>Marge</h3><h4>Director<br/>Role-Model: Kubrick<br/>Intent: Exclamatory</h4>
+		</li>
+		<li id="feature" style="border-radius:10px;padding:5px;font-size:70%;border:3px solid yellow">
+		<img src="./images/writer.jpg" style="float:right;width:30px"></img>
+		<h3>Neville</h3><h4>Writer<br/>Role-Model: Spielberg<br/>Intent: Declarative</h4>
+		</li>
+	</ul>
+</div>
+			
+		
+		
 		<p></p>	
 
 		<h3></h3>
-		<p><a href="./#two" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" class="ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all" id="checkPeople"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Check Human Resources</span></span></a></p>	
+		<p><a href="#" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" class="ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all" id="checkPeople"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Check Human Resources</span></span></a></p>	
 		<p><a href="./#three" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" class="ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all" id="addPeople"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Add Human Resource</span></span></a></p>	
 		<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" class="ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all" id="viewProject"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Show Current Project</span></span></a></p>
 	</div><!-- /content -->
@@ -38,47 +71,52 @@
 	<div data-role="footer" data-id="footerBar" name="footerBar">
 	<div data-role="navbar">
 	<ul>
-	<li><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p></li>
-	<li><a href="./#two" data-direction="reverse" data-role="button" data-theme="a" id="checkPeople">Human Resources</a></p></li>
-	<li><a href="https://github.com/JustinHegelKhalil/Mobile-Interfaces-Usability.git" id="github" data-role="button" data-theme="a">Github Link</a></p></li>
-	<li><a href="#three" data-direction="reverse" data-role="button" data-theme="a" id="addPeople">Add Asset</a></p></li>
+	<li><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></li>
+	<li><a href="https://github.com/JustinHegelKhalil/Mobile-Interfaces-Usability.git" id="github" data-role="button" data-theme="a">Github Link</a></li>
+	
+	<li><a href="#" id="openPeople" data-direction="reverse" data-role="button" data-theme="a">Human Resources</a></li>
+	<li><a href="#three" data-direction="reverse" data-role="button" data-theme="a">Add Asset</a></li>
 	</ul>
+	<a href="./#two" data-direction="reverse" id="openHumanResources" data-role="button" data-theme="a">Human Resources</a>
 	</div>
 	</div><!-- /footer -->
 </div><!-- /page one -->
 
 
 <!-- Start of page: #two -->
-<div data-role="page" id="two" data-theme="a" data-url="two">
-
-	<div data-role="header" class="ui-header ui-bar-e" role="banner">
+<div data-role="page" id="two" data-theme="e" data-url="two">
+ <script type="text/javascript" charset="utf-8"></script>
+	<div data-role="header" class="ui-header ui-bar-a" role="banner">
+		
+	
 	<img src="./images/creativeDifferences.png" style="width:100%"></img>
 	</div><!-- /header -->
 
 	<div data-role="content" data-theme="a">	
-		<h2>Assets</h2>
-		<div id="resources" name="resources"></div>
-		<p>Members of the company</p>
-		<div id="members">
+		<h2>Company Staff</h2>
+		<div id="resources" name="resources" data-theme="a">
+		<div data-role="fieldcontain" data-theme="a">
+		<ul id="members" data-role="listview" data-theme="a" data-filter="true" style="margin:5%">
+		
    
-</div>	
-		
-		
+		</ul>	
+		</div>
+		</div>
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-id="footerBar" name="footerBar">
 	<div data-role="navbar">
 	<ul>
-	<li><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p></li>
-	<li><a href="./#two" data-direction="reverse" data-role="button" data-theme="a" id="checkPeople">Human Resources</a></p></li>
-	<li><a href="#three" data-direction="reverse" data-role="button" data-theme="a" id="addPeople">Add Asset</a></p></li>
+	<li><a href="./#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p></li>
+	<li><a href="./#two" data-direction="reverse" data-role="button" data-theme="a">Human Resources</a></p></li>
+	<li><a href="./#three" data-direction="reverse" data-role="button" data-theme="a">Add Asset</a></p></li>
 	</ul>
 	</div>
 	</div><!-- /footer -->
 </div><!-- /page two -->
 <div data-role="page" id="three" data-theme="a" data-url="three">
 
-	<div data-role="header" class="ui-header ui-bar-e" role="banner">
+	<div data-role="header" class="ui-header ui-bar-a" role="banner">
 	<img src="./images/creativeDifferences.png" style="width:100%"></img>
 	</div><!-- /header -->
 
@@ -86,7 +124,7 @@
 		<h2>Asset Adder</h2>
 		<form action="" method="post" id="assetAdder" validate="true">
 		<input type="reset" data-icon="refresh" data-mini="true" id="resetButton" value="Reset Fields" /></input>
-		<label for="name" id="label" style="font-size:small">Name:</label><input type="text" value placeholder="John" data-mini="true" class="required" name="name" id="name" data-mini="true" style="display:block;width:90%"/>
+		<label for="nameField" id="label" style="font-size:small">Name:</label><input type="text" value placeholder="John" data-mini="true" class="required" name="nameField" id="nameField" data-mini="true" style="display:block;width:90%"/>
 		<div data-role="fieldcontain">
 		<label for="model" data-mini="true">Asset's Role Model:</label>
 		<select id="model" name="model" data-mini="true" class="required validate" data-native-menu="true">
@@ -129,8 +167,6 @@
 		<option value="exclamatory">exclamatory</option>
 		</select>
 		</div>
-		<label for="experience">Experience Level (hours):</label>
-		<input type="range" name="experience" data-mini="true" id="experience" value="100" min="0" max="10000" />
 		<label for="date" data-mini="true">Date Of Hire</label>
 		<input type="text" id="date" data-mini="true" size="30" class="required"></input>
 		
@@ -145,8 +181,8 @@
 	<div data-role="navbar">
 	<ul>
 	<li><a href="#one" data-direction="reverse" data-role="button" data-theme="a">Home</a></p></li>
-	<li><a href="./#two" data-direction="reverse" data-role="button" data-theme="a" id="checkPeople">Human Resources</a></p></li>
-	<li><a href="#three" data-direction="reverse" data-role="button" data-theme="a" id="addPeople">Add Asset</a></p></li>
+	<li><a href="#two" data-direction="reverse" data-role="button" data-theme="a">Human Resources</a></p></li>
+	<li><a href="#three" data-direction="reverse" data-role="button" data-theme="a">Add Asset</a></p></li>
 	</ul>
 	</div>
 	</div><!-- /footer -->
@@ -157,6 +193,7 @@
 <div data-role="page" id="popup" data-url="popup" data-theme="a">
 
 	<div data-role="header" data-theme="a">
+
 		<h1>Dialog</h1>
 	</div><!-- /header -->
 
@@ -185,12 +222,12 @@
 
 
 <div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div>
-<script src="./js/libs/jquery-1.7.1.min.js"></script>
+	<script src="./js/libs/jquery-1.7.1.min.js"></script>
+		<script src="./js/json.js"></script>
+	<script src="./js/main.js"></script>
 	<script src="./js/libs/jquery-ui-1.8.23.custom.min.js"></script>
 	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
 	<script src="./js/libs/jquery.validate.js"></script>
-	
-	<script src="./js/json.js"></script>
-	<script src="./js/main.js"></script>
+
 
 </body></html>

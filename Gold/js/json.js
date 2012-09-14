@@ -3,7 +3,6 @@ json = {
 		"name": ["Name:", "Duane"],
 		"model": ["Model:", "Welles"],
 		"job": ["Job:", "Director"],
-		"experience": ["Experience:", "1000"],
 		"mission": ["Mission:", "interrogatory"],
 		"date": ["01","06","1992"]		
 	},
@@ -11,7 +10,6 @@ json = {
 		"name": ["Name:", "Pete"],
 		"model": ["Model:", "Kubrick"],
 		"job": ["Job:", "Photographer"],
-		"experience": ["Experience:", "900"],
 		"mission": ["Mission:", "entertainment"],
 		"date": ["03","10","1990"]		
 	},
@@ -19,7 +17,6 @@ json = {
 		"name": ["Name:", "Stu"],
 		"model": ["Model:", "Hitchcock"],
 		"job": ["Job:", "Writer"],
-		"experience": ["Experience:", "900"],
 		"mission": ["Mission:", "informational"],
 		"date": ["01","10","1989"]	
 	},
@@ -27,7 +24,6 @@ json = {
 		"name": ["Name:", "Kevin"],
 		"model": ["Model:", "Kurasawa"],
 		"job": ["Job:", "Producer"],
-		"experience": ["Experience:", "3000"],
 		"mission": ["Mission:", "profit"],
 		"date": ["06","12","1991"]	
 	},
@@ -35,7 +31,6 @@ json = {
 		"name": ["Name:", "Wendell"],
 		"model": ["Model:", "Lean"],
 		"job": ["Job:", "Editor"],
-		"experience": ["Experience:", "4000"],
 		"mission": ["Mission:", "informational"],
 		"date": ["02","02","1992"]		
 	},
@@ -43,7 +38,6 @@ json = {
 		"name": ["Name:", "Mike"],
 		"model": ["Model:", "Leone"],
 		"job": ["Job:", "Composer"],
-		"experience": ["Experience:", "120"],
 		"mission": ["Mission:", "declarative"],
 		"date": ["03","03","1993"]		
 	},
@@ -51,7 +45,6 @@ json = {
 		"name": ["Name:", "Ben"],
 		"model": ["Model:", "Spielberg"],
 		"job": ["Job:", "Director"],
-		"experience": ["Experience:", "1900"],
 		"mission": ["Mission:", "imperative"],
 		"date": ["04","04","1994"]	
 	},
@@ -59,7 +52,6 @@ json = {
 		"name": ["Name:", "Orland"],
 		"model": ["Model:", "Wilder"],
 		"job": ["Job:", "Writer"],
-		"experience": ["Experience:", "310"],
 		"mission": ["Mission:", "declarative"],
 		"date": ["06","06","1996"]	
 	},
@@ -67,7 +59,6 @@ json = {
 		"name": ["Name:", "Neal"],
 		"model": ["Model:", "Lucas"],
 		"job": ["Job:", "Writer"],
-		"experience": ["Experience:", "900"],
 		"mission": ["Mission:", "interrogatory"],
 		"date": ["05","04","1996"]	
 	},
@@ -75,7 +66,6 @@ json = {
 		"name": ["Name:", "Sven"],
 		"model": ["Model:", "Disney"],
 		"job": ["Job:", "Artist"],
-		"experience": ["Experience:", "90"],
 		"mission": ["Mission:", "exclamatory"],
 		"date": ["12","30","1986"]	
 	},
@@ -83,7 +73,6 @@ json = {
 		"name": ["Name:", "Peter"],
 		"model": ["Model:", "Welles"],
 		"job": ["Job:", "Director"],
-		"experience": ["Experience:", "1000"],
 		"mission": ["Mission:", "interrogatory"],
 		"date": ["10","06","1992"]		
 	},
@@ -91,7 +80,6 @@ json = {
 		"name": ["Name:", "Aaron"],
 		"model": ["Model:", "Kubrick"],
 		"job": ["Job:", "Photographer"],
-		"experience": ["Experience:", "900"],
 		"mission": ["Mission:", "entertainment"],
 		"date": ["03","10","1990"]		
 	},
@@ -99,7 +87,6 @@ json = {
 		"name": ["Name:", "Karen"],
 		"model": ["Model:", "Hitchcock"],
 		"job": ["Job:", "Writer"],
-		"experience": ["Experience:", "900"],
 		"mission": ["Mission:", "informational"],
 		"date": ["01","01","1989"]	
 	},
@@ -107,7 +94,6 @@ json = {
 		"name": ["Name:", "Melody"],
 		"model": ["Model:", "Kurasawa"],
 		"job": ["Job:", "Producer"],
-		"experience": ["Experience:", "3000"],
 		"mission": ["Mission:", "profit"],
 		"date": ["12","30","1991"]	
 	},
@@ -115,7 +101,6 @@ json = {
 		"name": ["Name:", "Wes"],
 		"model": ["Model:", "Lean"],
 		"job": ["Job:", "Editor"],
-		"experience": ["Experience:", "4000"],
 		"mission": ["Mission:", "informational"],
 		"date": ["02","02","1992"]		
 	},
@@ -123,7 +108,6 @@ json = {
 		"name": ["Name:", "Michelle"],
 		"model": ["Model:", "Leone"],
 		"job": ["Job:", "Composer"],
-		"experience": ["Experience:", "120"],
 		"mission": ["Mission:", "declarative"],
 		"date": ["03","03","1993"]		
 	},
@@ -131,7 +115,6 @@ json = {
 		"name": ["Name:", "Quinn"],
 		"model": ["Model:", "Spielberg"],
 		"job": ["Job:", "Director"],
-		"experience": ["Experience:", "1900"],
 		"mission": ["Mission:", "imperative"],
 		"date": ["04","04","1994"]	
 	},
@@ -139,7 +122,6 @@ json = {
 		"name": ["Name:", "Nolan"],
 		"model": ["Model:", "Wilder"],
 		"job": ["Job:", "Writer"],
-		"experience": ["Experience:", "310"],
 		"mission": ["Mission:", "declarative"],
 		"date": ["06","06","1996"]	
 	},
@@ -147,7 +129,6 @@ json = {
 		"name": ["Name:", "Desmond"],
 		"model": ["Model:", "Lucas"],
 		"job": ["Job:", "Writer"],
-		"experience": ["Experience:", "900"],
 		"mission": ["Mission:", "interrogatory"],
 		"date": ["05","04","1996"]	
 	},
@@ -155,7 +136,6 @@ json = {
 		"name": ["Name:", "Olaf"],
 		"model": ["Model:", "Disney"],
 		"job": ["Job:", "Artist"],
-		"experience": ["Experience:", "90"],
 		"mission": ["Mission:", "exclamatory"],
 		"date": ["06","09","1986"]	
 	}
