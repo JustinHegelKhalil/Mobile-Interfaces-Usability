@@ -82,12 +82,15 @@ var displayPeople = function(filterItem){
 	var resources = $('#resources');
 	var clearButton = $('<a href="#" id="clearB" style="margin-bottom:10%;top:-40px">Clear Employees</a>');
 	members.append(clearButton).trigger('create');
-	members.append(directorFilter);
-	members.append(composerFilter);
-	members.append(editorFilter);
-	members.append(writerFilter);
-	members.append(producerFilter);
-	members.append(unfilter);
+	members.append(directorFilter).trigger('create');
+	members.append(composerFilter).trigger('create');
+	members.append(editorFilter).trigger('create');
+	members.append(writerFilter).trigger('create');
+	members.append(producerFilter).trigger('create');
+	members.append(unfilter).trigger('create');
+	var dfilter = $('#findDirectors').attr('data-role', 'button');
+	dfilter.attr('data-mini', 'true');
+	dfilter.css('float', 'right');
 	clearButton.attr('id', 'clearButton');
 	clearButton.attr('data-role', 'button');
 	clearButton.attr('href', '#');
@@ -154,8 +157,16 @@ var displayPeople = function(filterItem){
 			var formLineModel = ('<div data-role="fieldcontain"  class="itemsListed"><label for="model" data-mini="true">Role Model:</label><select id="model"   name="model" data-mini="true" class="required validate" data-native-menu="true"><option data-placeholder="true" value="'+model+'">Asset\'s current role-model is '+model+'</option><option value="Lean">David Lean</option><option value="Hitchcock">Alfred Hitchcock</option><option value="Welles">Orson Welles</option><option value="Lucas">George Lucas</option><option value="Wilder">Billy Wilder</option><option value="Leone">Sergio Leone</option><option value="Spielberg">Steven Spielberg</option><option value="Akira">Akira Kurasawa</option><option value="Disney">Walt Disney</option><option value="Kubrick">Stanley Kubrick</option></select></div>');
 			var formLineJob = ('<div data-role="fieldcontain"   class="itemsListed"><label for="job" data-mini="true">Asset\'s Job:</label><select id="job"   name="job" data-mini="true" class="required validate" data-native-menu="true"><option data-placeholder="true" value="'+job+'">Asset\'s current job is '+job+'.</option><option value="Director">Director</option><option value="Writer">Writer</option><option value="Photographer">Photographer</option><option value="Producer">Producer</option><option value="Editor">Editor</option><option value="Composer">Composer</option><option value="Artist">Artist</option></select></div>');
 			var formLineMission = ('<div data-role="fieldcontain"><label for="mission" data-mini="true">Asset\'s Motivation:</label><select id="mission" name="mission" data-mini="true" class="required validate" data-native-menu="true"><option data-placeholder="true" value='+mission+'>Asset\'s motivation is currently '+mission+'.</option><option value="informational">informational</option><option value="imperative">imperative</option><option value="interrogatory">interrogatory</option><option value="entertainment">entertainment</option><option value="profit">profit</option><option value="declarative">declarative</option><option value="exclamatory">exclamatory</option></select></div>');
-			var saveButton = ('<a href="#" data-role="button" data-mini="true" style="float:right">save settings</a>');
+			var saveButton = ('<a href="#" data-role="button" id="save'+n+'" data-mini="true" style="float:right">save settings</a>');
 			var formLineDate = ('<label for="date" data-mini="true">Date Of Hire is '+date+'</label><input type="text" id="date" value="'+date+'"data-mini="true" class="required"></input>');
+			$('#'+'save'+n).click(function(){
+				var data = {}
+				data.name = ['name', this.name.val()];
+				data.model = ['model', this.model.val()];
+				data.job = ['job', this.job.val()];
+				data.mission = ['mission', this.mission.val()];
+				data.date = ['date', this.date.val()];
+				localStorage.setItem(n, JSON.stringify(data))});
 			/*
 			var butCode0 = ('<script type="text/javascript">');
 			var butCode1 = ('var data = {}');
@@ -188,11 +199,13 @@ var displayPeople = function(filterItem){
 			secretStuff.attr('collapsible', 'true');
 			colDiv.attr('data-role', 'collapsible');
 			//$("ul.members").append(html).listview("refresh");
-			var html = "";
+			//var html = "";
 		}
 	}
+
+
 var showDirectors = function(){
-	//console.log("show only directors");
+	//console.log("show only directorsx`");
 	$('.Editor').hide();
 	$('.Composer').hide();
 	$('.Producer').hide();
@@ -255,6 +268,7 @@ writerFilter.click(writers);
 producerFilter.click(producers);
 unfilter.click(showEveryThing);
 directorFilter.click(showDirectors);
+//directorFilter.click(showDirectors);
 
 }
 
